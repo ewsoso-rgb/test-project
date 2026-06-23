@@ -1,0 +1,45 @@
+/* style.css */
+
+/* Define color palettes for both light and dark themes using CSS variables. */
+:root {
+    --background-color-light: #fafafa;
+    --text-color-light: #333;
+    --background-color-dark: #212121;
+    --text-color-dark: #fafafa;
+}
+
+body {
+    font-family: sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light mode by default */
+body {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+
+/* Create a .dark-mode class to apply the dark theme. */
+body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+/* Add a button to index.html that will be used to toggle between modes. */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #fff;
+    color: #333;
+}
+
+body.dark-mode #theme-toggle {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
